@@ -13,7 +13,7 @@ with st.form(key="fmi_form"):
 if submitted:
     try:
         st.info("Conectando al FMI...")
-        fmi = Request("IMF")
+        fmi = Request('https://dataservices.imf.org/REST/SDMX_XML.svc')
         resp = fmi.dataflow()
         flows = resp.dataflow
 
@@ -27,4 +27,4 @@ if submitted:
             data = [(k, v.name.en) for k, v in filtered.items()]
             st.dataframe(data, use_container_width=True)
     except Exception as e:
-        st.error(f"❌ Error al consultar los datos: {e}")
+        st.error(f"❌ Error al consultar los datos: {e}")        
