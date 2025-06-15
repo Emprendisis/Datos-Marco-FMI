@@ -13,7 +13,7 @@ with st.form(key="fmi_form"):
 if submitted:
     try:
         st.info("Conectando al FMI...")
-        fmi = Request('https://dataservices.imf.org/REST/SDMX_XML.svc')
+        fmi = Request()
         resp = fmi.dataflow()
         flows = resp.dataflow
 
