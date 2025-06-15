@@ -1,0 +1,3 @@
+streamlit==1.45.1
+pandasdmx==1.5.0
+pydantic==1.7.4
